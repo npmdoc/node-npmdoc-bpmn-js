@@ -1,0 +1,1880 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a>bpmn-js (v0.20.5)</a>
+</h1>
+<h4>A bpmn 2.0 toolkit and web modeler</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.bpmn-js">module bpmn-js</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bpmn-js.BpmnImporter">
+            function <span class="apidocSignatureSpan">bpmn-js.</span>BpmnImporter
+            <span class="apidocSignatureSpan">(eventBus, canvas, elementFactory, elementRegistry, translate)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bpmn-js.BpmnRenderer">
+            function <span class="apidocSignatureSpan">bpmn-js.</span>BpmnRenderer
+            <span class="apidocSignatureSpan">(eventBus, styles, pathMap, canvas, priority)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">bpmn-js.</span>BpmnImporter.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">bpmn-js.</span>BpmnRenderer.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">bpmn-js.</span>DiUtil</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">bpmn-js.</span>Importer</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">bpmn-js.</span>LabelUtil</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">bpmn-js.</span>ModelUtil</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">bpmn-js.</span>Util</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.bpmn-js.BpmnImporter">module bpmn-js.BpmnImporter</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bpmn-js.BpmnImporter.BpmnImporter">
+            function <span class="apidocSignatureSpan">bpmn-js.</span>BpmnImporter
+            <span class="apidocSignatureSpan">(eventBus, canvas, elementFactory, elementRegistry, translate)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.bpmn-js.BpmnImporter.prototype">module bpmn-js.BpmnImporter.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bpmn-js.BpmnImporter.prototype._attachBoundary">
+            function <span class="apidocSignatureSpan">bpmn-js.BpmnImporter.prototype.</span>_attachBoundary
+            <span class="apidocSignatureSpan">(boundarySemantic, boundaryElement)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bpmn-js.BpmnImporter.prototype._getElement">
+            function <span class="apidocSignatureSpan">bpmn-js.BpmnImporter.prototype.</span>_getElement
+            <span class="apidocSignatureSpan">(semantic)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bpmn-js.BpmnImporter.prototype._getEnd">
+            function <span class="apidocSignatureSpan">bpmn-js.BpmnImporter.prototype.</span>_getEnd
+            <span class="apidocSignatureSpan">(semantic, side)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bpmn-js.BpmnImporter.prototype._getSource">
+            function <span class="apidocSignatureSpan">bpmn-js.BpmnImporter.prototype.</span>_getSource
+            <span class="apidocSignatureSpan">(semantic)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bpmn-js.BpmnImporter.prototype._getTarget">
+            function <span class="apidocSignatureSpan">bpmn-js.BpmnImporter.prototype.</span>_getTarget
+            <span class="apidocSignatureSpan">(semantic)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bpmn-js.BpmnImporter.prototype.add">
+            function <span class="apidocSignatureSpan">bpmn-js.BpmnImporter.prototype.</span>add
+            <span class="apidocSignatureSpan">(semantic, parentElement)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bpmn-js.BpmnImporter.prototype.addLabel">
+            function <span class="apidocSignatureSpan">bpmn-js.BpmnImporter.prototype.</span>addLabel
+            <span class="apidocSignatureSpan">(semantic, element)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.bpmn-js.BpmnRenderer">module bpmn-js.BpmnRenderer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bpmn-js.BpmnRenderer.BpmnRenderer">
+            function <span class="apidocSignatureSpan">bpmn-js.</span>BpmnRenderer
+            <span class="apidocSignatureSpan">(eventBus, styles, pathMap, canvas, priority)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bpmn-js.BpmnRenderer.super_">
+            function <span class="apidocSignatureSpan">bpmn-js.BpmnRenderer.</span>super_
+            <span class="apidocSignatureSpan">(eventBus, renderPriority)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.bpmn-js.BpmnRenderer.prototype">module bpmn-js.BpmnRenderer.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bpmn-js.BpmnRenderer.prototype.canRender">
+            function <span class="apidocSignatureSpan">bpmn-js.BpmnRenderer.prototype.</span>canRender
+            <span class="apidocSignatureSpan">(element)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bpmn-js.BpmnRenderer.prototype.drawConnection">
+            function <span class="apidocSignatureSpan">bpmn-js.BpmnRenderer.prototype.</span>drawConnection
+            <span class="apidocSignatureSpan">(parentGfx, element)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bpmn-js.BpmnRenderer.prototype.drawShape">
+            function <span class="apidocSignatureSpan">bpmn-js.BpmnRenderer.prototype.</span>drawShape
+            <span class="apidocSignatureSpan">(parentGfx, element)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bpmn-js.BpmnRenderer.prototype.getShapePath">
+            function <span class="apidocSignatureSpan">bpmn-js.BpmnRenderer.prototype.</span>getShapePath
+            <span class="apidocSignatureSpan">(element)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.bpmn-js.DiUtil">module bpmn-js.DiUtil</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bpmn-js.DiUtil.hasCompensateEventDefinition">
+            function <span class="apidocSignatureSpan">bpmn-js.DiUtil.</span>hasCompensateEventDefinition
+            <span class="apidocSignatureSpan">(element)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bpmn-js.DiUtil.hasErrorEventDefinition">
+            function <span class="apidocSignatureSpan">bpmn-js.DiUtil.</span>hasErrorEventDefinition
+            <span class="apidocSignatureSpan">(element)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bpmn-js.DiUtil.hasEscalationEventDefinition">
+            function <span class="apidocSignatureSpan">bpmn-js.DiUtil.</span>hasEscalationEventDefinition
+            <span class="apidocSignatureSpan">(element)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bpmn-js.DiUtil.hasEventDefinition">
+            function <span class="apidocSignatureSpan">bpmn-js.DiUtil.</span>hasEventDefinition
+            <span class="apidocSignatureSpan">(element, eventType)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bpmn-js.DiUtil.isEventSubProcess">
+            function <span class="apidocSignatureSpan">bpmn-js.DiUtil.</span>isEventSubProcess
+            <span class="apidocSignatureSpan">(element)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bpmn-js.DiUtil.isExpanded">
+            function <span class="apidocSignatureSpan">bpmn-js.DiUtil.</span>isExpanded
+            <span class="apidocSignatureSpan">(element)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bpmn-js.DiUtil.isInterrupting">
+            function <span class="apidocSignatureSpan">bpmn-js.DiUtil.</span>isInterrupting
+            <span class="apidocSignatureSpan">(element)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.bpmn-js.Importer">module bpmn-js.Importer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bpmn-js.Importer.importBpmnDiagram">
+            function <span class="apidocSignatureSpan">bpmn-js.Importer.</span>importBpmnDiagram
+            <span class="apidocSignatureSpan">(diagram, definitions, done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.bpmn-js.LabelUtil">module bpmn-js.LabelUtil</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bpmn-js.LabelUtil.getExternalLabelBounds">
+            function <span class="apidocSignatureSpan">bpmn-js.LabelUtil.</span>getExternalLabelBounds
+            <span class="apidocSignatureSpan">(semantic, element)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bpmn-js.LabelUtil.getExternalLabelMid">
+            function <span class="apidocSignatureSpan">bpmn-js.LabelUtil.</span>getExternalLabelMid
+            <span class="apidocSignatureSpan">(element)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bpmn-js.LabelUtil.getFlowLabelPosition">
+            function <span class="apidocSignatureSpan">bpmn-js.LabelUtil.</span>getFlowLabelPosition
+            <span class="apidocSignatureSpan">(waypoints)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bpmn-js.LabelUtil.getWaypointsMid">
+            function <span class="apidocSignatureSpan">bpmn-js.LabelUtil.</span>getWaypointsMid
+            <span class="apidocSignatureSpan">(waypoints)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bpmn-js.LabelUtil.hasExternalLabel">
+            function <span class="apidocSignatureSpan">bpmn-js.LabelUtil.</span>hasExternalLabel
+            <span class="apidocSignatureSpan">(semantic)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">bpmn-js.LabelUtil.</span>FLOW_LABEL_INDENT</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">bpmn-js.LabelUtil.</span>DEFAULT_LABEL_SIZE</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.bpmn-js.ModelUtil">module bpmn-js.ModelUtil</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bpmn-js.ModelUtil.getBusinessObject">
+            function <span class="apidocSignatureSpan">bpmn-js.ModelUtil.</span>getBusinessObject
+            <span class="apidocSignatureSpan">(element)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bpmn-js.ModelUtil.is">
+            function <span class="apidocSignatureSpan">bpmn-js.ModelUtil.</span>is
+            <span class="apidocSignatureSpan">(element, type)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.bpmn-js.Util">module bpmn-js.Util</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bpmn-js.Util.elementToString">
+            function <span class="apidocSignatureSpan">bpmn-js.Util.</span>elementToString
+            <span class="apidocSignatureSpan">(e)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.bpmn-js" id="apidoc.module.bpmn-js">module bpmn-js</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.bpmn-js.BpmnImporter" id="apidoc.element.bpmn-js.BpmnImporter">
+        function <span class="apidocSignatureSpan">bpmn-js.</span>BpmnImporter
+        <span class="apidocSignatureSpan">(eventBus, canvas, elementFactory, elementRegistry, translate)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function BpmnImporter(eventBus, canvas, elementFactory, elementRegistry, translate) {
+  this._eventBus = eventBus;
+  this._canvas = canvas;
+
+  this._elementFactory = elementFactory;
+  this._elementRegistry = elementRegistry;
+  this._translate = translate;
+
+  this._textUtil = new TextUtil();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bpmn-js.BpmnRenderer" id="apidoc.element.bpmn-js.BpmnRenderer">
+        function <span class="apidocSignatureSpan">bpmn-js.</span>BpmnRenderer
+        <span class="apidocSignatureSpan">(eventBus, styles, pathMap, canvas, priority)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function BpmnRenderer(eventBus, styles, pathMap, canvas, priority) {
+
+  BaseRenderer.call(this, eventBus, priority);
+
+  var textUtil = new TextUtil({
+    style: LABEL_STYLE,
+    size: { width: 100 }
+  });
+
+  var markers = {};
+
+  var computeStyle = styles.computeStyle;
+
+  function addMarker(id, options) {
+    var attrs = assign({
+      fill: 'black',
+      strokeWidth: 1,
+      strokeLinecap: 'round',
+      strokeDasharray: 'none'
+    }, options.attrs);
+
+    var ref = options.ref || { x: 0, y: 0 };
+
+    var scale = options.scale || 1;
+
+    // fix for safari / chrome / firefox bug not correctly
+    // resetting stroke dash array
+    if (attrs.strokeDasharray === 'none') {
+      attrs.strokeDasharray = [10000, 1];
+    }
+
+    var marker = svgCreate('marker');
+
+    svgAttr(options.element, attrs);
+
+    svgAppend(marker, options.element);
+
+    svgAttr(marker, {
+      id: id,
+      viewBox: '0 0 20 20',
+      refX: ref.x,
+      refY: ref.y,
+      markerWidth: 20 * scale,
+      markerHeight: 20 * scale,
+      orient: 'auto'
+    });
+
+    var defs = domQuery('defs', canvas._svg);
+
+    if (!defs) {
+      defs = svgCreate('defs');
+
+      svgAppend(canvas._svg, defs);
+    }
+
+    svgAppend(defs, marker);
+
+    markers[id] = marker;
+  }
+
+  function marker(type, fill, stroke) {
+    var id = type + '-' + fill + '-' + stroke;
+
+    if (!markers[id]) {
+      createMarker(type, fill, stroke);
+    }
+
+    return 'url(#' + id +  ')';
+  }
+
+  function createMarker(type, fill, stroke) {
+    var id = type + '-' + fill + '-' + stroke;
+
+    if (type === 'sequenceflow-end') {
+      var sequenceflowEnd = svgCreate('path');
+      svgAttr(sequenceflowEnd, { d: 'M 1 5 L 11 10 L 1 15 Z' });
+
+      addMarker(id, {
+        element: sequenceflowEnd,
+        ref: { x: 11, y: 10 },
+        scale: 0.5,
+        attrs: {
+          fill: stroke,
+          stroke: stroke
+        }
+      });
+    }
+
+    if (type === 'messageflow-start') {
+      var messageflowStart = svgCreate('circle');
+      svgAttr(messageflowStart, { cx: 6, cy: 6, r: 3.5 });
+
+      addMarker(id, {
+        element: messageflowStart,
+        attrs: {
+          fill: fill,
+          stroke: stroke
+        },
+        ref: { x: 6, y: 6 }
+      });
+    }
+
+    if (type === 'messageflow-end') {
+      var messageflowEnd = svgCreate('path');
+      svgAttr(messageflowEnd, { d: 'm 1 5 l 0 -3 l 7 3 l -7 3 z' });
+
+      addMarker(id, {
+        element: messageflowEnd,
+        attrs: {
+          fill: fill,
+          stroke: stroke,
+          strokeLinecap: 'butt'
+        },
+        ref: { x: 8.5, y: 5 }
+      });
+    }
+
+    if (type === 'association-start') {
+      var associationStart = svgCreate('path');
+      svgAttr(associationStart, { d: 'M 11 5 L 1 10 L 11 15' });
+
+      addMarker(id, {
+        element: associationStart,
+        attrs: {
+          fill: 'none',
+          stroke: stroke,
+          strokeWidth: 1.5
+        },
+        ref: { x: 1, y: 10 },
+        scale: 0.5
+      });
+    }
+
+    if (type === 'association-end') {
+      var associationEnd = svgCreate('path');
+      svgAttr(associationEnd, { d: 'M 1 5 L 11 10 L 1 15' });
+
+      addMarker(id, {
+        element: associationEnd,
+        attrs: {
+          fill: 'none',
+          stroke: stroke,
+          strokeWidth: 1.5
+        },
+        ref: { x: 12, y: 10 },
+        scale: 0.5
+      });
+    }
+
+    if (type === 'conditional-flow-marker') {
+      var conditionalflowMarker = svgCreate('path');
+      svgAttr(conditionalflowMarker, { d: 'M 0 10 L 8 6 L 16 10 L 8 14 Z' });
+
+      addMarker(id, {
+        element: conditionalflowMarker,
+        attrs: {
+          fill: fill,
+          stroke: stroke
+        },
+        ref: { x: -1, y: 10 },
+        scale: 0.5
+      });
+    }
+
+    if (type === 'conditional-default-flow-marker') {
+      var conditionaldefaultflowMarker = svgCreate('path');
+      svgAttr(conditionaldefaultflowMarker, { d: 'M 6 4 L 10 16' });
+
+      addMarker(id, {
+        element: conditionaldefaultflowMarker,
+        attrs: {
+          stroke: stroke
+        },
+        ref: { x: 0, y: 10 },
+        scale: 0.5
+      });
+    }
+  }
+
+  funct ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.bpmn-js.BpmnImporter" id="apidoc.module.bpmn-js.BpmnImporter">module bpmn-js.BpmnImporter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.bpmn-js.BpmnImporter.BpmnImporter" id="apidoc.element.bpmn-js.BpmnImporter.BpmnImporter">
+        function <span class="apidocSignatureSpan">bpmn-js.</span>BpmnImporter
+        <span class="apidocSignatureSpan">(eventBus, canvas, elementFactory, elementRegistry, translate)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function BpmnImporter(eventBus, canvas, elementFactory, elementRegistry, translate) {
+  this._eventBus = eventBus;
+  this._canvas = canvas;
+
+  this._elementFactory = elementFactory;
+  this._elementRegistry = elementRegistry;
+  this._translate = translate;
+
+  this._textUtil = new TextUtil();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.bpmn-js.BpmnImporter.prototype" id="apidoc.module.bpmn-js.BpmnImporter.prototype">module bpmn-js.BpmnImporter.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.bpmn-js.BpmnImporter.prototype._attachBoundary" id="apidoc.element.bpmn-js.BpmnImporter.prototype._attachBoundary">
+        function <span class="apidocSignatureSpan">bpmn-js.BpmnImporter.prototype.</span>_attachBoundary
+        <span class="apidocSignatureSpan">(boundarySemantic, boundaryElement)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_attachBoundary = function (boundarySemantic, boundaryElement) {
+  var translate = this._translate;
+  var hostSemantic = boundarySemantic.attachedToRef;
+
+  if (!hostSemantic) {
+    throw new Error(translate('missing {semantic}#attachedToRef', {
+      semantic: elementToString(boundarySemantic)
+    }));
+  }
+
+  var host = this._elementRegistry.get(hostSemantic.id),
+      attachers = host &amp;&amp; host.attachers;
+
+  if (!host) {
+    throw notYetDrawn(translate, boundarySemantic, hostSemantic, 'attachedToRef');
+  }
+
+  // wire element.host &lt;&gt; host.attachers
+  boundaryElement.host = host;
+
+  if (!attachers) {
+    host.attachers = attachers = [];
+  }
+
+  if (attachers.indexOf(boundaryElement) === -1) {
+    attachers.push(boundaryElement);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    x: Math.round(bounds.x),
+    y: Math.round(bounds.y),
+    width: Math.round(bounds.width),
+    height: Math.round(bounds.height)
+  }));
+
+  if (is(semantic, 'bpmn:BoundaryEvent')) {
+    this.<span class="apidocCodeKeywordSpan">_attachBoundary</span>(semantic, element);
+  }
+
+  this._canvas.addShape(element, parentElement);
+}
+
+// CONNECTION
+else if (is(di, 'bpmndi:BPMNEdge')) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bpmn-js.BpmnImporter.prototype._getElement" id="apidoc.element.bpmn-js.BpmnImporter.prototype._getElement">
+        function <span class="apidocSignatureSpan">bpmn-js.BpmnImporter.prototype.</span>_getElement
+        <span class="apidocSignatureSpan">(semantic)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_getElement = function (semantic) {
+  return this._elementRegistry.get(semantic.id);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// fix source / target for DataInputAssociation / DataOutputAssociation
+if (side === 'source' &amp;&amp; type === 'bpmn:DataOutputAssociation' ||
+    side === 'target' &amp;&amp; type === 'bpmn:DataInputAssociation') {
+
+  refSemantic = semantic.$parent;
+}
+
+element = refSemantic &amp;&amp; this.<span class="apidocCodeKeywordSpan">_getElement</span>(refSemantic);
+
+if (element) {
+  return element;
+}
+
+if (refSemantic) {
+  throw notYetDrawn(translate, semantic, refSemantic, side + 'Ref');
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bpmn-js.BpmnImporter.prototype._getEnd" id="apidoc.element.bpmn-js.BpmnImporter.prototype._getEnd">
+        function <span class="apidocSignatureSpan">bpmn-js.BpmnImporter.prototype.</span>_getEnd
+        <span class="apidocSignatureSpan">(semantic, side)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_getEnd = function (semantic, side) {
+
+  var element,
+      refSemantic,
+      type = semantic.$type,
+      translate = this._translate;
+
+  refSemantic = semantic[side + 'Ref'];
+
+  // handle mysterious isMany DataAssociation#sourceRef
+  if (side === 'source' &amp;&amp; type === 'bpmn:DataInputAssociation') {
+    refSemantic = refSemantic &amp;&amp; refSemantic[0];
+  }
+
+  // fix source / target for DataInputAssociation / DataOutputAssociation
+  if (side === 'source' &amp;&amp; type === 'bpmn:DataOutputAssociation' ||
+      side === 'target' &amp;&amp; type === 'bpmn:DataInputAssociation') {
+
+    refSemantic = semantic.$parent;
+  }
+
+  element = refSemantic &amp;&amp; this._getElement(refSemantic);
+
+  if (element) {
+    return element;
+  }
+
+  if (refSemantic) {
+    throw notYetDrawn(translate, semantic, refSemantic, side + 'Ref');
+  } else {
+    throw new Error(translate('{semantic}#{side} Ref not specified', {
+      semantic: elementToString(semantic),
+      side: side
+    }));
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      semantic: elementToString(semantic),
+      side: side
+    }));
+  }
+};
+
+BpmnImporter.prototype._getSource = function(semantic) {
+  return this.<span class="apidocCodeKeywordSpan">_getEnd</span>(semantic, 'source');
+};
+
+BpmnImporter.prototype._getTarget = function(semantic) {
+  return this._getEnd(semantic, 'target');
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bpmn-js.BpmnImporter.prototype._getSource" id="apidoc.element.bpmn-js.BpmnImporter.prototype._getSource">
+        function <span class="apidocSignatureSpan">bpmn-js.BpmnImporter.prototype.</span>_getSource
+        <span class="apidocSignatureSpan">(semantic)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_getSource = function (semantic) {
+  return this._getEnd(semantic, 'source');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+this._canvas.addShape(element, parentElement);
+  }
+
+  // CONNECTION
+  else if (is(di, 'bpmndi:BPMNEdge')) {
+
+var source = this.<span class="apidocCodeKeywordSpan">_getSource</span>(semantic),
+    target = this._getTarget(semantic);
+
+hidden = parentElement &amp;&amp; (parentElement.hidden || parentElement.collapsed);
+
+element = this._elementFactory.createConnection(elementData(semantic, {
+  hidden: hidden,
+  source: source,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bpmn-js.BpmnImporter.prototype._getTarget" id="apidoc.element.bpmn-js.BpmnImporter.prototype._getTarget">
+        function <span class="apidocSignatureSpan">bpmn-js.BpmnImporter.prototype.</span>_getTarget
+        <span class="apidocSignatureSpan">(semantic)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_getTarget = function (semantic) {
+  return this._getEnd(semantic, 'target');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+this._canvas.addShape(element, parentElement);
+  }
+
+  // CONNECTION
+  else if (is(di, 'bpmndi:BPMNEdge')) {
+
+var source = this._getSource(semantic),
+    target = this.<span class="apidocCodeKeywordSpan">_getTarget</span>(semantic);
+
+hidden = parentElement &amp;&amp; (parentElement.hidden || parentElement.collapsed);
+
+element = this._elementFactory.createConnection(elementData(semantic, {
+  hidden: hidden,
+  source: source,
+  target: target,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bpmn-js.BpmnImporter.prototype.add" id="apidoc.element.bpmn-js.BpmnImporter.prototype.add">
+        function <span class="apidocSignatureSpan">bpmn-js.BpmnImporter.prototype.</span>add
+        <span class="apidocSignatureSpan">(semantic, parentElement)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">add = function (semantic, parentElement) {
+
+  var di = semantic.di,
+      element,
+      translate = this._translate,
+      hidden;
+
+  // ROOT ELEMENT
+  // handle the special case that we deal with a
+  // invisible root element (process or collaboration)
+  if (is(di, 'bpmndi:BPMNPlane')) {
+
+    // add a virtual element (not being drawn)
+    element = this._elementFactory.createRoot(elementData(semantic));
+
+    this._canvas.setRootElement(element);
+  }
+
+  // SHAPE
+  else if (is(di, 'bpmndi:BPMNShape')) {
+
+    var collapsed = !isExpanded(semantic);
+    hidden = parentElement &amp;&amp; (parentElement.hidden || parentElement.collapsed);
+
+    var bounds = semantic.di.bounds;
+
+    element = this._elementFactory.createShape(elementData(semantic, {
+      collapsed: collapsed,
+      hidden: hidden,
+      x: Math.round(bounds.x),
+      y: Math.round(bounds.y),
+      width: Math.round(bounds.width),
+      height: Math.round(bounds.height)
+    }));
+
+    if (is(semantic, 'bpmn:BoundaryEvent')) {
+      this._attachBoundary(semantic, element);
+    }
+
+    this._canvas.addShape(element, parentElement);
+  }
+
+  // CONNECTION
+  else if (is(di, 'bpmndi:BPMNEdge')) {
+
+    var source = this._getSource(semantic),
+        target = this._getTarget(semantic);
+
+    hidden = parentElement &amp;&amp; (parentElement.hidden || parentElement.collapsed);
+
+    element = this._elementFactory.createConnection(elementData(semantic, {
+      hidden: hidden,
+      source: source,
+      target: target,
+      waypoints: collectWaypoints(semantic.di.waypoint)
+    }));
+
+    if (is(semantic, 'bpmn:DataAssociation')) {
+
+      // render always on top; this ensures DataAssociations
+      // are rendered correctly across different "hacks" people
+      // love to model such as cross participant / sub process
+      // associations
+      parentElement = null;
+    }
+
+    this._canvas.addConnection(element, parentElement);
+  } else {
+    throw new Error(translate('unknown di {di} for element {semantic}', {
+      di: elementToString(di),
+      semantic: elementToString(semantic)
+    }));
+  }
+  // (optional) LABEL
+  if (hasExternalLabel(semantic)) {
+    this.addLabel(semantic, element);
+  }
+
+
+  this._eventBus.fire('bpmnElement.added', { element: element });
+
+  return element;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    var banner = grunt.template.process(BANNER, grunt.config.get()),
+bannerMin = grunt.template.process(BANNER_MIN, grunt.config.get());
+
+    browserify(browserifyOptions)
+      .plugin(derequire)
+      .plugin(collapse)
+      .<span class="apidocCodeKeywordSpan">add</span>(src)
+      .bundle(function(err, result) {
+
+timer.done('bundled');
+
+if (err) {
+  return done(err);
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bpmn-js.BpmnImporter.prototype.addLabel" id="apidoc.element.bpmn-js.BpmnImporter.prototype.addLabel">
+        function <span class="apidocSignatureSpan">bpmn-js.BpmnImporter.prototype.</span>addLabel
+        <span class="apidocSignatureSpan">(semantic, element)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addLabel = function (semantic, element) {
+  var bounds,
+      text,
+      label;
+
+  bounds = getExternalLabelBounds(semantic, element);
+
+  text = semantic.name;
+
+  if (text) {
+    // get corrected bounds from actual layouted text
+    bounds = getLayoutedBounds(bounds, text, this._textUtil);
+  }
+
+  label = this._elementFactory.createLabel(elementData(semantic, {
+    id: semantic.id + '_label',
+    labelTarget: element,
+    type: 'label',
+    hidden: element.hidden || !semantic.name,
+    x: Math.round(bounds.x),
+    y: Math.round(bounds.y),
+    width: Math.round(bounds.width),
+    height: Math.round(bounds.height)
+  }));
+
+  return this._canvas.addShape(label, element.parent);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    throw new Error(translate('unknown di {di} for element {semantic}', {
+      di: elementToString(di),
+      semantic: elementToString(semantic)
+    }));
+  }
+  // (optional) LABEL
+  if (hasExternalLabel(semantic)) {
+    this.<span class="apidocCodeKeywordSpan">addLabel</span>(semantic, element);
+  }
+
+
+  this._eventBus.fire('bpmnElement.added', { element: element });
+
+  return element;
+};
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.bpmn-js.BpmnRenderer" id="apidoc.module.bpmn-js.BpmnRenderer">module bpmn-js.BpmnRenderer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.bpmn-js.BpmnRenderer.BpmnRenderer" id="apidoc.element.bpmn-js.BpmnRenderer.BpmnRenderer">
+        function <span class="apidocSignatureSpan">bpmn-js.</span>BpmnRenderer
+        <span class="apidocSignatureSpan">(eventBus, styles, pathMap, canvas, priority)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function BpmnRenderer(eventBus, styles, pathMap, canvas, priority) {
+
+  BaseRenderer.call(this, eventBus, priority);
+
+  var textUtil = new TextUtil({
+    style: LABEL_STYLE,
+    size: { width: 100 }
+  });
+
+  var markers = {};
+
+  var computeStyle = styles.computeStyle;
+
+  function addMarker(id, options) {
+    var attrs = assign({
+      fill: 'black',
+      strokeWidth: 1,
+      strokeLinecap: 'round',
+      strokeDasharray: 'none'
+    }, options.attrs);
+
+    var ref = options.ref || { x: 0, y: 0 };
+
+    var scale = options.scale || 1;
+
+    // fix for safari / chrome / firefox bug not correctly
+    // resetting stroke dash array
+    if (attrs.strokeDasharray === 'none') {
+      attrs.strokeDasharray = [10000, 1];
+    }
+
+    var marker = svgCreate('marker');
+
+    svgAttr(options.element, attrs);
+
+    svgAppend(marker, options.element);
+
+    svgAttr(marker, {
+      id: id,
+      viewBox: '0 0 20 20',
+      refX: ref.x,
+      refY: ref.y,
+      markerWidth: 20 * scale,
+      markerHeight: 20 * scale,
+      orient: 'auto'
+    });
+
+    var defs = domQuery('defs', canvas._svg);
+
+    if (!defs) {
+      defs = svgCreate('defs');
+
+      svgAppend(canvas._svg, defs);
+    }
+
+    svgAppend(defs, marker);
+
+    markers[id] = marker;
+  }
+
+  function marker(type, fill, stroke) {
+    var id = type + '-' + fill + '-' + stroke;
+
+    if (!markers[id]) {
+      createMarker(type, fill, stroke);
+    }
+
+    return 'url(#' + id +  ')';
+  }
+
+  function createMarker(type, fill, stroke) {
+    var id = type + '-' + fill + '-' + stroke;
+
+    if (type === 'sequenceflow-end') {
+      var sequenceflowEnd = svgCreate('path');
+      svgAttr(sequenceflowEnd, { d: 'M 1 5 L 11 10 L 1 15 Z' });
+
+      addMarker(id, {
+        element: sequenceflowEnd,
+        ref: { x: 11, y: 10 },
+        scale: 0.5,
+        attrs: {
+          fill: stroke,
+          stroke: stroke
+        }
+      });
+    }
+
+    if (type === 'messageflow-start') {
+      var messageflowStart = svgCreate('circle');
+      svgAttr(messageflowStart, { cx: 6, cy: 6, r: 3.5 });
+
+      addMarker(id, {
+        element: messageflowStart,
+        attrs: {
+          fill: fill,
+          stroke: stroke
+        },
+        ref: { x: 6, y: 6 }
+      });
+    }
+
+    if (type === 'messageflow-end') {
+      var messageflowEnd = svgCreate('path');
+      svgAttr(messageflowEnd, { d: 'm 1 5 l 0 -3 l 7 3 l -7 3 z' });
+
+      addMarker(id, {
+        element: messageflowEnd,
+        attrs: {
+          fill: fill,
+          stroke: stroke,
+          strokeLinecap: 'butt'
+        },
+        ref: { x: 8.5, y: 5 }
+      });
+    }
+
+    if (type === 'association-start') {
+      var associationStart = svgCreate('path');
+      svgAttr(associationStart, { d: 'M 11 5 L 1 10 L 11 15' });
+
+      addMarker(id, {
+        element: associationStart,
+        attrs: {
+          fill: 'none',
+          stroke: stroke,
+          strokeWidth: 1.5
+        },
+        ref: { x: 1, y: 10 },
+        scale: 0.5
+      });
+    }
+
+    if (type === 'association-end') {
+      var associationEnd = svgCreate('path');
+      svgAttr(associationEnd, { d: 'M 1 5 L 11 10 L 1 15' });
+
+      addMarker(id, {
+        element: associationEnd,
+        attrs: {
+          fill: 'none',
+          stroke: stroke,
+          strokeWidth: 1.5
+        },
+        ref: { x: 12, y: 10 },
+        scale: 0.5
+      });
+    }
+
+    if (type === 'conditional-flow-marker') {
+      var conditionalflowMarker = svgCreate('path');
+      svgAttr(conditionalflowMarker, { d: 'M 0 10 L 8 6 L 16 10 L 8 14 Z' });
+
+      addMarker(id, {
+        element: conditionalflowMarker,
+        attrs: {
+          fill: fill,
+          stroke: stroke
+        },
+        ref: { x: -1, y: 10 },
+        scale: 0.5
+      });
+    }
+
+    if (type === 'conditional-default-flow-marker') {
+      var conditionaldefaultflowMarker = svgCreate('path');
+      svgAttr(conditionaldefaultflowMarker, { d: 'M 6 4 L 10 16' });
+
+      addMarker(id, {
+        element: conditionaldefaultflowMarker,
+        attrs: {
+          stroke: stroke
+        },
+        ref: { x: 0, y: 10 },
+        scale: 0.5
+      });
+    }
+  }
+
+  funct ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bpmn-js.BpmnRenderer.super_" id="apidoc.element.bpmn-js.BpmnRenderer.super_">
+        function <span class="apidocSignatureSpan">bpmn-js.BpmnRenderer.</span>super_
+        <span class="apidocSignatureSpan">(eventBus, renderPriority)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function BaseRenderer(eventBus, renderPriority) {
+  var self = this;
+
+  renderPriority = renderPriority || DEFAULT_RENDER_PRIORITY;
+
+  eventBus.on([ 'render.shape', 'render.connection' ], renderPriority, function(evt, context) {
+    var type = evt.type,
+        element = context.element,
+        visuals = context.gfx;
+
+    if (self.canRender(element)) {
+      if (type === 'render.shape') {
+        return self.drawShape(visuals, element);
+      } else {
+        return self.drawConnection(visuals, element);
+      }
+    }
+  });
+
+  eventBus.on([ 'render.getShapePath', 'render.getConnectionPath'], renderPriority, function(evt, element) {
+    if (self.canRender(element)) {
+      if (evt.type === 'render.getShapePath') {
+        return self.getShapePath(element);
+      } else {
+        return self.getConnectionPath(element);
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.bpmn-js.BpmnRenderer.prototype" id="apidoc.module.bpmn-js.BpmnRenderer.prototype">module bpmn-js.BpmnRenderer.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.bpmn-js.BpmnRenderer.prototype.canRender" id="apidoc.element.bpmn-js.BpmnRenderer.prototype.canRender">
+        function <span class="apidocSignatureSpan">bpmn-js.BpmnRenderer.prototype.</span>canRender
+        <span class="apidocSignatureSpan">(element)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">canRender = function (element) {
+  return is(element, 'bpmn:BaseElement');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bpmn-js.BpmnRenderer.prototype.drawConnection" id="apidoc.element.bpmn-js.BpmnRenderer.prototype.drawConnection">
+        function <span class="apidocSignatureSpan">bpmn-js.BpmnRenderer.prototype.</span>drawConnection
+        <span class="apidocSignatureSpan">(parentGfx, element)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">drawConnection = function (parentGfx, element) {
+  var type = element.type;
+  var h = this.handlers[type];
+
+<span class="apidocCodeCommentSpan">  /* jshint -W040 */
+</span>  return h(parentGfx, element);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bpmn-js.BpmnRenderer.prototype.drawShape" id="apidoc.element.bpmn-js.BpmnRenderer.prototype.drawShape">
+        function <span class="apidocSignatureSpan">bpmn-js.BpmnRenderer.prototype.</span>drawShape
+        <span class="apidocSignatureSpan">(parentGfx, element)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">drawShape = function (parentGfx, element) {
+  var type = element.type;
+  var h = this.handlers[type];
+
+<span class="apidocCodeCommentSpan">  /* jshint -W040 */
+</span>  return h(parentGfx, element);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bpmn-js.BpmnRenderer.prototype.getShapePath" id="apidoc.element.bpmn-js.BpmnRenderer.prototype.getShapePath">
+        function <span class="apidocSignatureSpan">bpmn-js.BpmnRenderer.prototype.</span>getShapePath
+        <span class="apidocSignatureSpan">(element)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getShapePath = function (element) {
+
+  if (is(element, 'bpmn:Event')) {
+    return getCirclePath(element);
+  }
+
+  if (is(element, 'bpmn:Activity')) {
+    return getRoundRectPath(element, TASK_BORDER_RADIUS);
+  }
+
+  if (is(element, 'bpmn:Gateway')) {
+    return getDiamondPath(element);
+  }
+
+  return getRectPath(element);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.bpmn-js.DiUtil" id="apidoc.module.bpmn-js.DiUtil">module bpmn-js.DiUtil</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.bpmn-js.DiUtil.hasCompensateEventDefinition" id="apidoc.element.bpmn-js.DiUtil.hasCompensateEventDefinition">
+        function <span class="apidocSignatureSpan">bpmn-js.DiUtil.</span>hasCompensateEventDefinition
+        <span class="apidocSignatureSpan">(element)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hasCompensateEventDefinition = function (element) {
+  return hasEventDefinition(element, 'bpmn:CompensateEventDefinition');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bpmn-js.DiUtil.hasErrorEventDefinition" id="apidoc.element.bpmn-js.DiUtil.hasErrorEventDefinition">
+        function <span class="apidocSignatureSpan">bpmn-js.DiUtil.</span>hasErrorEventDefinition
+        <span class="apidocSignatureSpan">(element)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hasErrorEventDefinition = function (element) {
+  return hasEventDefinition(element, 'bpmn:ErrorEventDefinition');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bpmn-js.DiUtil.hasEscalationEventDefinition" id="apidoc.element.bpmn-js.DiUtil.hasEscalationEventDefinition">
+        function <span class="apidocSignatureSpan">bpmn-js.DiUtil.</span>hasEscalationEventDefinition
+        <span class="apidocSignatureSpan">(element)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hasEscalationEventDefinition = function (element) {
+  return hasEventDefinition(element, 'bpmn:EscalationEventDefinition');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bpmn-js.DiUtil.hasEventDefinition" id="apidoc.element.bpmn-js.DiUtil.hasEventDefinition">
+        function <span class="apidocSignatureSpan">bpmn-js.DiUtil.</span>hasEventDefinition
+        <span class="apidocSignatureSpan">(element, eventType)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hasEventDefinition(element, eventType) {
+  var bo = getBusinessObject(element),
+      hasEventDefinition = false;
+
+  if (bo.eventDefinitions) {
+    forEach(bo.eventDefinitions, function(event) {
+      if (is(event, eventType)) {
+        hasEventDefinition = true;
+      }
+    });
+  }
+
+  return hasEventDefinition;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bpmn-js.DiUtil.isEventSubProcess" id="apidoc.element.bpmn-js.DiUtil.isEventSubProcess">
+        function <span class="apidocSignatureSpan">bpmn-js.DiUtil.</span>isEventSubProcess
+        <span class="apidocSignatureSpan">(element)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isEventSubProcess = function (element) {
+  return element &amp;&amp; !!getBusinessObject(element).triggeredByEvent;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  stroke: getStrokeColor(element)
+}, attrs);
+
+var rect = renderer('bpmn:Activity')(parentGfx, element, attrs);
+
+var expanded = DiUtil.isExpanded(element);
+
+var isEventSubProcess = DiUtil.<span class="apidocCodeKeywordSpan">isEventSubProcess</span>(element);
+
+if (isEventSubProcess) {
+  svgAttr(rect, {
+    strokeDasharray: '1,2'
+  });
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bpmn-js.DiUtil.isExpanded" id="apidoc.element.bpmn-js.DiUtil.isExpanded">
+        function <span class="apidocSignatureSpan">bpmn-js.DiUtil.</span>isExpanded
+        <span class="apidocSignatureSpan">(element)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isExpanded = function (element) {
+
+  if (is(element, 'bpmn:CallActivity')) {
+    return false;
+  }
+
+  if (is(element, 'bpmn:SubProcess')) {
+    return !!getBusinessObject(element).di.isExpanded;
+  }
+
+  if (is(element, 'bpmn:Participant')) {
+    return !!getBusinessObject(element).processRef;
+  }
+
+  return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  fillOpacity: 0.95,
+  fill: getFillColor(element),
+  stroke: getStrokeColor(element)
+}, attrs);
+
+var rect = renderer('bpmn:Activity')(parentGfx, element, attrs);
+
+var expanded = DiUtil.<span class="apidocCodeKeywordSpan">isExpanded</span>(element);
+
+var isEventSubProcess = DiUtil.isEventSubProcess(element);
+
+if (isEventSubProcess) {
+  svgAttr(rect, {
+    strokeDasharray: '1,2'
+  });
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bpmn-js.DiUtil.isInterrupting" id="apidoc.element.bpmn-js.DiUtil.isInterrupting">
+        function <span class="apidocSignatureSpan">bpmn-js.DiUtil.</span>isInterrupting
+        <span class="apidocSignatureSpan">(element)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isInterrupting = function (element) {
+  return element &amp;&amp; getBusinessObject(element).isInterrupting !== false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.bpmn-js.Importer" id="apidoc.module.bpmn-js.Importer">module bpmn-js.Importer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.bpmn-js.Importer.importBpmnDiagram" id="apidoc.element.bpmn-js.Importer.importBpmnDiagram">
+        function <span class="apidocSignatureSpan">bpmn-js.Importer.</span>importBpmnDiagram
+        <span class="apidocSignatureSpan">(diagram, definitions, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function importBpmnDiagram(diagram, definitions, done) {
+
+  var importer = diagram.get('bpmnImporter'),
+      eventBus = diagram.get('eventBus'),
+      translate = diagram.get('translate');
+
+  var error,
+      warnings = [];
+
+<span class="apidocCodeCommentSpan">  /**
+   * Walk the diagram semantically, importing (=drawing)
+   * all elements you encounter.
+   *
+   * @param {ModdleElement} definitions
+   */
+</span>  function render(definitions) {
+
+    var visitor = {
+
+      root: function(element) {
+        return importer.add(element);
+      },
+
+      element: function(element, parentShape) {
+        return importer.add(element, parentShape);
+      },
+
+      error: function(message, context) {
+        warnings.push({ message: message, context: context });
+      }
+    };
+
+    var walker = new BpmnTreeWalker(visitor, translate);
+
+    // traverse BPMN 2.0 document model,
+    // starting at definitions
+    walker.handleDefinitions(definitions);
+  }
+
+  eventBus.fire('import.render.start', { definitions: definitions });
+
+  try {
+    render(definitions);
+  } catch (e) {
+    error = e;
+  }
+
+  eventBus.fire('import.render.complete', {
+    error: error,
+    warnings: warnings
+  });
+
+  done(error, warnings);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      this.clear();
+    }
+
+    // update definitions
+    this.definitions = definitions;
+
+    // perform graphical import
+    Importer.<span class="apidocCodeKeywordSpan">importBpmnDiagram</span>(this, definitions, done);
+  } catch (e) {
+
+    // handle synchronous errors
+    done(e);
+  }
+};
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.bpmn-js.LabelUtil" id="apidoc.module.bpmn-js.LabelUtil">module bpmn-js.LabelUtil</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.bpmn-js.LabelUtil.getExternalLabelBounds" id="apidoc.element.bpmn-js.LabelUtil.getExternalLabelBounds">
+        function <span class="apidocSignatureSpan">bpmn-js.LabelUtil.</span>getExternalLabelBounds
+        <span class="apidocSignatureSpan">(semantic, element)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getExternalLabelBounds = function (semantic, element) {
+
+  var mid,
+      size,
+      bounds,
+      di = semantic.di,
+      label = di.label;
+
+  if (label &amp;&amp; label.bounds) {
+    bounds = label.bounds;
+
+    size = {
+      width: Math.max(DEFAULT_LABEL_SIZE.width, bounds.width),
+      height: bounds.height
+    };
+
+    mid = {
+      x: bounds.x + bounds.width / 2,
+      y: bounds.y + bounds.height / 2
+    };
+  } else {
+
+    mid = getExternalLabelMid(element);
+
+    size = DEFAULT_LABEL_SIZE;
+  }
+
+  return assign({
+    x: mid.x - size.width / 2,
+    y: mid.y - size.height / 2
+  }, size);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bpmn-js.LabelUtil.getExternalLabelMid" id="apidoc.element.bpmn-js.LabelUtil.getExternalLabelMid">
+        function <span class="apidocSignatureSpan">bpmn-js.LabelUtil.</span>getExternalLabelMid
+        <span class="apidocSignatureSpan">(element)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getExternalLabelMid(element) {
+
+  if (element.waypoints) {
+    return getFlowLabelPosition(element.waypoints);
+  } else {
+    return {
+      x: element.x + element.width / 2,
+      y: element.y + element.height + DEFAULT_LABEL_SIZE.height / 2
+    };
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bpmn-js.LabelUtil.getFlowLabelPosition" id="apidoc.element.bpmn-js.LabelUtil.getFlowLabelPosition">
+        function <span class="apidocSignatureSpan">bpmn-js.LabelUtil.</span>getFlowLabelPosition
+        <span class="apidocSignatureSpan">(waypoints)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getFlowLabelPosition(waypoints) {
+
+  // get the waypoints mid
+  var mid = waypoints.length / 2 - 1;
+
+  var first = waypoints[Math.floor(mid)];
+  var second = waypoints[Math.ceil(mid + 0.01)];
+
+  // get position
+  var position = getWaypointsMid(waypoints);
+
+  // calculate angle
+  var angle = Math.atan( (second.y - first.y) / (second.x - first.x) );
+
+  var x = position.x,
+      y = position.y;
+
+  if ( Math.abs(angle) &lt; Math.PI / 2 ) {
+    y -= FLOW_LABEL_INDENT;
+  } else {
+    x += FLOW_LABEL_INDENT;
+  }
+
+  return { x: x, y: y };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bpmn-js.LabelUtil.getWaypointsMid" id="apidoc.element.bpmn-js.LabelUtil.getWaypointsMid">
+        function <span class="apidocSignatureSpan">bpmn-js.LabelUtil.</span>getWaypointsMid
+        <span class="apidocSignatureSpan">(waypoints)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getWaypointsMid(waypoints) {
+
+  var mid = waypoints.length / 2 - 1;
+
+  var first = waypoints[Math.floor(mid)];
+  var second = waypoints[Math.ceil(mid + 0.01)];
+
+  return {
+    x: first.x + (second.x - first.x) / 2,
+    y: first.y + (second.y - first.y) / 2
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bpmn-js.LabelUtil.hasExternalLabel" id="apidoc.element.bpmn-js.LabelUtil.hasExternalLabel">
+        function <span class="apidocSignatureSpan">bpmn-js.LabelUtil.</span>hasExternalLabel
+        <span class="apidocSignatureSpan">(semantic)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hasExternalLabel = function (semantic) {
+  return is(semantic, 'bpmn:Event') ||
+         is(semantic, 'bpmn:Gateway') ||
+         is(semantic, 'bpmn:DataStoreReference') ||
+         is(semantic, 'bpmn:DataObjectReference') ||
+         is(semantic, 'bpmn:SequenceFlow') ||
+         is(semantic, 'bpmn:MessageFlow');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.bpmn-js.ModelUtil" id="apidoc.module.bpmn-js.ModelUtil">module bpmn-js.ModelUtil</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.bpmn-js.ModelUtil.getBusinessObject" id="apidoc.element.bpmn-js.ModelUtil.getBusinessObject">
+        function <span class="apidocSignatureSpan">bpmn-js.ModelUtil.</span>getBusinessObject
+        <span class="apidocSignatureSpan">(element)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getBusinessObject(element) {
+  return (element &amp;&amp; element.businessObject) || element;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bpmn-js.ModelUtil.is" id="apidoc.element.bpmn-js.ModelUtil.is">
+        function <span class="apidocSignatureSpan">bpmn-js.ModelUtil.</span>is
+        <span class="apidocSignatureSpan">(element, type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function is(element, type) {
+  var bo = getBusinessObject(element);
+
+  return bo &amp;&amp; (typeof bo.$instanceOf === 'function') &amp;&amp; bo.$instanceOf(type);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.bpmn-js.Util" id="apidoc.module.bpmn-js.Util">module bpmn-js.Util</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.bpmn-js.Util.elementToString" id="apidoc.element.bpmn-js.Util.elementToString">
+        function <span class="apidocSignatureSpan">bpmn-js.Util.</span>elementToString
+        <span class="apidocSignatureSpan">(e)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">elementToString = function (e) {
+  if (!e) {
+    return '&lt;null&gt;';
+  }
+
+  return '&lt;' + e.$type + (e.id ? ' id="' + e.id : '') + '" /&gt;';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
