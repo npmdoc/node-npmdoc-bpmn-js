@@ -1,6 +1,6 @@
 {
     "author": "kai zhu <kaizhu256@gmail.com>",
-    "description": "#### api documentation for  bpmn-js (v0.20.5)  [![npm package](https://img.shields.io/npm/v/npmdoc-bpmn-js.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-bpmn-js) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-bpmn-js.svg)](https://travis-ci.org/npmdoc/node-npmdoc-bpmn-js)",
+    "description": "#### basic api documentation for  [bpmn-js (v0.20.5)](https://github.com/bpmn-io/bpmn-js#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-bpmn-js.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-bpmn-js) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-bpmn-js.svg)](https://travis-ci.org/npmdoc/node-npmdoc-bpmn-js)",
     "devDependencies": {
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
         "utility2": "kaizhu256/node-utility2#alpha"
